@@ -1,0 +1,194 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #fff;
+    text-align: center;
+    list-style: none;
+}
+
+/* Whole body screen  */
+body {
+    background: #333 url("https://wallpapers.com/images/hd/northern-lights-pictures-9gqb73aktngcm850.jpg");
+    background-attachment: fixed;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+}
+
+/* Nav tab */
+nav {
+    display: flex;
+    justify-content: space-between;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.8rem;
+}
+
+nav ul {
+    display: flex;
+}
+
+li {
+    margin: 0.5rem;
+    padding: 0.5rem;
+}
+
+/* Sign in button bg color blue */
+nav ul:last-child li i{
+    margin: 0 1px;
+}
+
+nav ul:last-child li:last-child {
+    background-color: rgb(82, 82, 242);
+}
+
+.home {
+    height: 100%;
+    width: 50%;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-self: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Google logo */
+
+.logo {
+    margin-top: 20dvh;
+    font-size: 5rem;
+    cursor: default;
+    font-weight: bold;
+}
+
+.logo span:nth-child(4),
+.logo span:first-child {
+    color: rgb(82, 82, 242);
+}
+
+.logo span:nth-child(2),
+.logo span:last-child {
+    color: rgb(212, 4, 4);
+}
+
+.logo span:nth-child(3) {
+    color: rgb(254, 189, 9);
+}
+
+.logo span:nth-child(5) {
+    color: rgb(2, 171, 2);
+}
+
+.logo span:first-child {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
+/* Search box */
+
+.search {
+    margin: 3rem auto 2rem auto;
+    width: 65dvw;
+    height: 2.7rem;
+    display: flex;
+}
+
+#search-box {
+    width: 90%;
+    padding-left: 1rem;
+    text-align: left;
+    font-size: 1rem;
+    background-color: #fff;
+    color: black;
+    border: none;
+    outline: none;
+    /*Removes outline that appears when clicked on input box */
+
+}
+
+/* Search button */
+
+.search button {
+    background-color: #fff;
+    border: none;
+
+    i {
+        color: black;
+    }
+}
+
+#magnifier {
+    width: 10%;
+    border-top-left-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+
+}
+
+/* Making X button invisible by default */
+#x-btn {
+    width: 5%;
+}
+
+#camera-btn {
+    width: 10%;
+    border-top-right-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+}
+
+/* Bookmarks */
+
+.bookmarks {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 10dvh;
+}
+
+.book {
+    width: 7rem;
+    height: 7rem;
+    padding: 1rem;
+    border-radius: 0.2rem;
+    font-size: small;
+}
+
+.book:hover {
+    background-color: #f9f9fb35;
+}
+
+.book div:nth-child(1) {
+    height: 80%;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+img {
+    height: 70%;
+    width: 50%;
+    border-radius: 50%;
+}
+
+@media screen and (orientation:landscape) {
+    .search {
+        width: 44dvw;
+    }
+}
+
+@media screen and (orientation:portrait) {
+    .home {
+        width: 70dvw;
+    }
+
+    #magnifier {
+        width: 15%;
+    }
+
+    #camera-btn {
+        width: 15%;
+    }
+}
