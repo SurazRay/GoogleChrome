@@ -1,3 +1,11 @@
+/* Googler logo font */
+@font-face {
+    font-family: 'Product Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Open Sans'), local('OpenSans'), url(https://fonts.gstatic.com/s/productsans/v5/HYvgU2fE2nRJvZ5JFAumwegdm0LZdjqr5-oayXSOefg.woff2) format('woff2');
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -36,7 +44,7 @@ li {
 }
 
 /* Sign in button bg color blue */
-nav ul:last-child li i{
+nav ul:last-child li i {
     margin: 0 1px;
 }
 
@@ -53,15 +61,14 @@ nav ul:last-child li:last-child {
     align-items: center;
     justify-self: center;
     font-family: Arial, Helvetica, sans-serif;
+
 }
 
 /* Google logo */
 
 .logo {
     margin-top: 20dvh;
-    font-size: 5rem;
     cursor: default;
-    font-weight: bold;
 }
 
 .logo span:nth-child(4),
@@ -82,8 +89,12 @@ nav ul:last-child li:last-child {
     color: rgb(2, 171, 2);
 }
 
-.logo span:first-child {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+.logo span {
+    font-family: 'Product Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 5.5rem;
+    margin: auto 1px;
 }
 
 /* Search box */
@@ -173,6 +184,19 @@ img {
     border-radius: 50%;
 }
 
+.news {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+iframe {
+    height: 50dvh;
+    width: 45dvw;
+    margin: 1rem;
+}
+
 @media screen and (orientation:landscape) {
     .search {
         width: 44dvw;
@@ -181,7 +205,15 @@ img {
 
 @media screen and (orientation:portrait) {
     .home {
-        width: 70dvw;
+        width: 90dvw;
+    }
+
+    .logo {
+        margin-top: 3rem;
+    }
+
+    .search {
+        width: 100%;
     }
 
     #magnifier {
@@ -190,5 +222,25 @@ img {
 
     #camera-btn {
         width: 15%;
+    }
+
+    .bookmarks {
+        max-width: 100%;
+        flex-wrap: nowrap;
+        overflow-y: auto;
+    }
+
+    /* Disappering scroller */
+    .bookmarks::-webkit-scrollbar {
+        width: 0px;
+    }
+
+    .book {
+        min-width: 25%;
+    }
+
+    iframe {
+        margin-top: 0;
+        width: 90dvw;
     }
 }
